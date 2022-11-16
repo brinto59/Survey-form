@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Roboto+Slab:wght@500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  color: white;
+}
+
+  
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  /* background: rgba(88, 110, 168, 0.7) url("bg.jpeg") center center/ cover no-repeat fixed; */
+  
+  background:linear-gradient(115deg,rgba(58, 58, 158, 0.8),rgba(136, 136, 206, 0.7)), url("bg.jpeg") center center/cover no-repeat fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+header {
+  text-align: center;
+  color: white;
+  margin: 34px 0px;
+}
+header h1{
+    font-size: 38px;
+}
+header p{
+  font-size: 17px;
+  font-style: oblique;
+  font-stretch: wider;
+}
+#survey-form {
+  width: 650px;
+  margin: 20px auto;
+  /* background-color: rgba(9, 9, 71,0.7); */
+  background: rgba(2, 24, 85, 0.7) url("bg.jpeg") center center/ cover no-repeat fixed;
+  background-blend-mode: darken;
+  padding: 12px 15px;
+  display: flex;
+  flex-direction: column;
+}
+.input-class {
+  width: 90%;
+  margin:8px auto;
+  display: flex;
+  flex-direction: column;
+}
+.input-class>h3, .input-class>label{
+  font-size: 18px;
+  margin: 5px 0;
+  font-weight: bold;
+  font-family: 'Noto Sans TC', sans-serif;
+} 
+
+/*checkbox*/
+.container{
+  margin: 2px 0;
+  font-size: 17px;
+  position: relative;
+  /* cursor: pointer; */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
+}
+.container label{
+  cursor: pointer;
+  margin-left: 28px;
+}
+.container input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  z-index: 4;
+}
+.checkbox{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border:1px solid white;
+}
+.container:hover .checkbox{
+  background-color: #ccc;
+}
+.container input:checked ~.checkbox{
+  background-color: rgb(28, 158, 245);
+}
+.checkbox::after{
+  content:"";
+  position: absolute;
+  top: 1px;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 3px 3px 0px;
+  transform: rotate(45deg);
+  display: none;
+}
+.container input:checked ~.checkbox::after{
+  display: block;
+}
+.form-control{
+    box-sizing: border-box;
+    display: block;
+    width: 95%;
+    height: 33px;
+    border-radius: 6px;
+    font-size: 15px;
+    padding: 4px 10px;
+    margin: 2px 0px;
+}
+.form-control::placeholder{
+    color:#495057 ;
+}
+textarea#comment{
+  box-sizing: border-box;
+    resize: vertical;
+    display: block;
+    font-size: 18px;
+    font-family: sans-serif;
+    border-radius: 6px;
+    padding: 4px 10px;
+    width: 95%;
+}
+#submit-div{
+    width: 90%;
+    margin: auto;
+}
+#submit{
+    box-sizing: border-box;
+    display: block;
+    width: 95%;
+    border: none;
+    outline:none;
+    margin: 0px 0px 12px;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;
+    background-color: rgb(25, 143, 25);
+}
+.first-span{
+  font-size: 15px;
+}
